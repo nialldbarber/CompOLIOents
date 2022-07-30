@@ -30,22 +30,9 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
   }
 
   return flashlist ? (
-    <FlashList
-      data={data}
-      renderItem={renderItem}
-      keyExtractor={keyExtractor}
-      estimatedItemSize={estimatedItemSize}
-      ref={refs}
-      {...rest}
-    />
+    <FlashList {...internals} estimatedItemSize={estimatedItemSize} />
   ) : (
-    <RnFlatList
-      data={data}
-      renderItem={renderItem}
-      keyExtractor={keyExtractor}
-      ref={refs}
-      {...rest}
-    />
+    <RnFlatList {...internals} />
   )
 }
 
