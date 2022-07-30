@@ -15,10 +15,10 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
   renderItem: JSX.Element | Array<JSX.Element>
   refs?: any
 }) => {
-  const F = Factory(RnFlatList)
+  const FL = Factory(RnFlatList)
 
   return (
-    <F
+    <FL
       data={data}
       renderItem={renderItem}
       keyExtractor={(item: any) => item.id}
