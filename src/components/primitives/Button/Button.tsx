@@ -38,12 +38,12 @@ const Button = ({
   refs,
   ...rest
 }: ButtonProps) => {
-  const FactoryButton = Factory(Container)
+  const B = Factory(Container)
   const variants = buttonVariants[color]
   const sizes = sizeVariants[size]
 
   return (
-    <FactoryButton
+    <B
       ref={refs}
       accessible={accessible}
       accessibilityLabel={accessibilityLabel ?? text}
@@ -61,7 +61,7 @@ const Button = ({
       ) : (
         children
       )}
-    </FactoryButton>
+    </B>
   )
 }
 
