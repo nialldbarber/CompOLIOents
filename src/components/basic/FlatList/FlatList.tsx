@@ -26,9 +26,9 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
   const SFL = Factory(FlashList)
 
   const internals = {
-    data: data,
-    renderItem: renderItem,
-    keyExtractor: keyExtractor,
+    data,
+    renderItem,
+    keyExtractor,
     ref: refs,
     ...rest,
   }
