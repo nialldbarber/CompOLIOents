@@ -3,9 +3,13 @@ import { FlatList as RnFlatList } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
 
 type Base = {
-  data: Record<any, any>[]
-  renderItem: any
-  keyExtractor: (item: any) => any
+  data: Record<string, any>[]
+  renderItem: (
+    ...args: any[]
+  ) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null
+  keyExtractor?:
+    | ((item: Record<string, any>, index: number) => string)
+    | undefined
   refs?: any
 }
 
@@ -18,7 +22,7 @@ type Props = Base & FlatListProps
 /**
  * ## FlatList
  * If you use the `flashlist` prop,
- * _*make sure*_ to add `estimatedItemSize`!
+ * _make sure_ to add `estimatedItemSize`!
  */
 const FlatList = ({
   data,
