@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface PlatformProps<T> {
+export type PlatformProps<T> = {
   _web?: Partial<T>
   _ios?: Partial<T>
   _android?: Partial<T>
@@ -9,13 +9,13 @@ export interface PlatformProps<T> {
   _important?: Partial<T>
 }
 
-export type FactoryComponentProps = any &
+type FactoryComponentProps = any &
   PlatformProps<any> & {
     children?: string | JSX.Element | JSX.Element[]
   }
 
-function Factory<T>(Component: React.ComponentType<T>) {
-  return React.forwardRef(
+const Factory = <T,>(Component: React.ComponentType<T>) =>
+  React.forwardRef(
     ({ children, ...props }: T & FactoryComponentProps, ref: any) => {
       return (
         <Component {...props} ref={ref}>
@@ -24,6 +24,5 @@ function Factory<T>(Component: React.ComponentType<T>) {
       )
     }
   )
-}
 
 export default Factory
