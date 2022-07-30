@@ -33,6 +33,7 @@ const getStories = () => {
   return [
     require("../src/stories/Button.stories.tsx"),
     require("../src/stories/FlatList.stories.tsx"),
+    require("../src/stories/Text.stories.tsx"),
   ];
 };
 

@@ -11,7 +11,7 @@ const buttonVariants: Record<
   }
 > = {
   primary: {
-    color: 'orange',
+    color: '#111',
     backgroundColor: 'dodgerblue',
     border: '1px solid dodgerblue',
   },

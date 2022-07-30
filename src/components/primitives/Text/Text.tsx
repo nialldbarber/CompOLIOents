@@ -11,13 +11,23 @@ type TextProps = {
   text?: string
   size?: Size
   variants?: TextVariants
+  isTruncated?: boolean
+  bold?: boolean
+  italic?: boolean
+  underline?: boolean
+  strikeThrough?: boolean
   children?: string
 }
 
 const Text = ({
   text,
-  variants = 'primary',
   size = 'medium',
+  variants = 'primary',
+  isTruncated,
+  bold,
+  italic,
+  underline,
+  strikeThrough,
   children,
 }: TextProps) => {
   const T = Factory(RnText)
@@ -25,7 +35,15 @@ const Text = ({
   const { color } = buttonVariants[variants]
 
   return (
-    <T $variant={color} $fontSize={fontSize}>
+    <T
+      $variant={color}
+      $fontSize={fontSize}
+      $isTruncated={isTruncated}
+      $bold={bold}
+      $italic={italic}
+      $underline={underline}
+      $strikeThrough={strikeThrough}
+    >
       {text ?? children}
     </T>
   )
