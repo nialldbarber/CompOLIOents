@@ -4,7 +4,6 @@ import {
   FlatListProps as RnFlatListProps,
 } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
-import { Factory } from '~@core/factory'
 
 const FlatList = <TItem extends RnFlatListProps<TItem>>({
   data,
@@ -16,15 +15,12 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
   ...rest
 }: {
   data: Record<any, any>[]
-  renderItem: Element | Element[]
+  renderItem: any
   keyExtractor: (item: any) => any
   flashlist?: boolean
   estimatedItemSize?: number
   refs?: any
 }) => {
-  const FL = Factory(RnFlatList)
-  const SFL = Factory(FlashList)
-
   const internals = {
     data,
     renderItem,
@@ -33,7 +29,24 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
     ...rest,
   }
 
-  return flashlist ? <SFL {...internals} /> : <FL {...internals} />
+  return flashlist ? (
+    <FlashList
+      data={data}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      estimatedItemSize={estimatedItemSize}
+      ref={refs}
+      {...rest}
+    />
+  ) : (
+    <RnFlatList
+      data={data}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      ref={refs}
+      {...rest}
+    />
+  )
 }
 
 export default FlatList
