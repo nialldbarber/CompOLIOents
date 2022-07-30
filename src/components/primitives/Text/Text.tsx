@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Text as RnText } from '~@components/primitives/Text/styles'
 import { Factory } from '~@core/factory'
+import type { FontWeightsT } from '~@theme/base/typography'
 import buttonVariants from '~@theme/variants/button'
-import sizeVariants, { Size } from '~@theme/variants/sizes'
+import sizeVariants, { type Size } from '~@theme/variants/sizes'
 import type { States } from '~@types/index'
 
 type TextVariants = States
@@ -13,6 +14,7 @@ type TextProps = {
   variants?: TextVariants
   isTruncated?: boolean
   bold?: boolean
+  fontWeight?: FontWeightsT
   italic?: boolean
   underline?: boolean
   strikeThrough?: boolean
