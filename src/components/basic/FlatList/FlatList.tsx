@@ -1,8 +1,5 @@
 import * as React from 'react'
-import {
-  FlatList as RnFlatList,
-  FlatListProps as RnFlatListProps,
-} from 'react-native'
+import { FlatList as RnFlatList } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
 
 type Base = {
@@ -18,6 +15,11 @@ type FlatListProps =
 
 type Props = Base & FlatListProps
 
+/**
+ * ## FlatList
+ * If you use the `flashlist` prop,
+ * _*make sure*_ to add `estimatedItemSize`!
+ */
 const FlatList = ({
   data,
   renderItem,
