@@ -5,7 +5,20 @@ import {
 } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
 
-const FlatList = <TItem extends RnFlatListProps<TItem>>({
+type Base = {
+  data: Record<any, any>[]
+  renderItem: any
+  keyExtractor: (item: any) => any
+  refs?: any
+}
+
+type FlatListProps =
+  | { flashlist?: true; estimatedItemSize: number }
+  | { flashlist?: false; estimatedItemSize?: never }
+
+type Props = Base & FlatListProps
+
+const FlatList = ({
   data,
   renderItem,
   keyExtractor,
@@ -13,14 +26,7 @@ const FlatList = <TItem extends RnFlatListProps<TItem>>({
   estimatedItemSize,
   refs,
   ...rest
-}: {
-  data: Record<any, any>[]
-  renderItem: any
-  keyExtractor: (item: any) => any
-  flashlist?: boolean
-  estimatedItemSize?: number
-  refs?: any
-}) => {
+}: Props) => {
   const internals = {
     data,
     renderItem,
