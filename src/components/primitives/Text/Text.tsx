@@ -3,17 +3,19 @@ import { Text as RnText } from '~@components/primitives/Text/styles'
 import { Factory } from '~@core/factory'
 import buttonVariants from '~@theme/variants/button'
 import sizeVariants, { Size } from '~@theme/variants/sizes'
-import { States } from '~@types/index'
+import type { States } from '~@types/index'
 
 type TextVariants = States
 
 type TextProps = {
+  text?: string
   size?: Size
   variants?: TextVariants
   children?: string
 }
 
 const Text = ({
+  text,
   variants = 'primary',
   size = 'medium',
   children,
@@ -24,7 +26,7 @@ const Text = ({
 
   return (
     <T $variant={color} $fontSize={fontSize}>
-      {children}
+      {text ?? children}
     </T>
   )
 }

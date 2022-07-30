@@ -24,8 +24,20 @@ const DATA = [
 
 const Item = ({ title }) => <Text>{title}</Text>
 
-export const Test = (args: any) => (
+export const NormalFlatList = (args: any) => (
   <>
     <FlatList data={DATA} renderItem={Item} keyExtractor={(item) => item.id} />
+  </>
+)
+
+export const FlashList = (args: any) => (
+  <>
+    <FlatList
+      data={DATA}
+      renderItem={Item}
+      keyExtractor={(item) => item.id}
+      flashlist
+      estimatedItemSize={3}
+    />
   </>
 )
