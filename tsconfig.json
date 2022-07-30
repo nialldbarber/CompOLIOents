@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "~@components/*": ["./src/components/*"],
+      "~@core/*": ["./src/core/*"],
+      "~@utils/*": ["./src/utils/*"],
+      "~@theme/*": ["./src/theme/*"],
+      "~@types/*": ["./src/types/*"],
+      "~@tests/*": ["./src/tests/*"],
+      "~@stories/*": ["./src/stories/*"]
+    }
+  },
+  "types": ["jest", "node", "styled-components-react-native"]
+}
