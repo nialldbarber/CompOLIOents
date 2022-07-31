@@ -3,14 +3,14 @@ import { Text as RnText } from '~@components/primitives/Text/styles'
 import { Factory } from '~@core/factory'
 import type { TFontWeights } from '~@theme/base/typography'
 import buttonVariants from '~@theme/variants/button'
-import sizeVariants, { type Size } from '~@theme/variants/sizes'
+import sizeVariants, { type TSize } from '~@theme/variants/sizes'
 import type { States } from '~@types/index'
 
 type TextVariants = States
 
 type TextProps = {
   text?: string
-  size?: Size
+  size?: TSize
   variants?: TextVariants
   isTruncated?: boolean
   bold?: boolean

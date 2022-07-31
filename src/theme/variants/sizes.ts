@@ -1,10 +1,10 @@
 import spacing from '~@theme/base/spacing'
 import { fontSizes } from '~@theme/base/typography'
 
-export type Size = 'small' | 'medium' | 'large' | 'x-large'
+export type TSize = 'small' | 'medium' | 'large' | 'x-large'
 
 const sizeVariants: Record<
-  Size,
+  TSize,
   {
     paddingHorizontal: string
     paddingVertical: string

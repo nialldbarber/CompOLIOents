@@ -5,7 +5,7 @@ import { Container } from '~@components/primitives/Button/styles'
 import { Text } from '~@components/primitives/Text'
 import { Factory } from '~@core/factory'
 import buttonVariants, { type TButtonVariants } from '~@theme/variants/button'
-import sizeVariants, { type Size } from '~@theme/variants/sizes'
+import sizeVariants, { type TSize } from '~@theme/variants/sizes'
 
 /**
  * TODOS:
@@ -16,7 +16,7 @@ import sizeVariants, { type Size } from '~@theme/variants/sizes'
 
 interface ButtonProps extends PressableProps {
   text?: string
-  size?: Size
+  size?: TSize
   accessible?: boolean
   accessibilityLabel?: string
   disabled?: boolean

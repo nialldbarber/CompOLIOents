@@ -3,13 +3,13 @@ import styled from 'styled-components/native'
 import { centerContent } from '~@theme/base/mixins'
 import radius from '~@theme/base/radius'
 import { TButtonVariants } from '~@theme/variants/button'
-import type { Size } from '~@theme/variants/sizes'
+import type { TSize } from '~@theme/variants/sizes'
 
 type ContainerProps = {
   $variants?: TButtonVariants
   $disabled?: boolean
   $styles?: CSSProp
-  $sizes?: Size
+  $sizes?: TSize
 }
 
 const disabledStyles = css`
