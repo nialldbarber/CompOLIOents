@@ -6,5 +6,5 @@ const borderWidth = {
   '8': '8px',
 } as const
 
-export type borderWidthT = keyof typeof borderWidth
+export type TBorderWidth = keyof typeof borderWidth
 export default borderWidth
