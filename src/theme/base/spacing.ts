@@ -47,5 +47,5 @@ const spacing = {
   full: w + 'px',
 } as const
 
-export type SpacingT = keyof typeof spacing
+export type TSpacing = keyof typeof spacing
 export default spacing

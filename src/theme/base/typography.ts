@@ -37,9 +37,9 @@ const typography = {
   },
 } as const
 
-export type TypographyT = typeof typography
-export type FontSizesT = keyof typeof typography.fontSizes
-export type FontWeightsT = keyof typeof typography.fontWeights
+export type TTypography = typeof typography
+export type TFontSizes = keyof typeof typography.fontSizes
+export type TFontWeights = keyof typeof typography.fontWeights
 export type LetterSpacingsT = keyof typeof typography.letterSpacings
 
 export const { fontSizes, fontWeights, letterSpacings } = typography

@@ -10,5 +10,5 @@ const radius = {
   full: '9999px',
 } as const
 
-export type RadiusT = keyof typeof radius
+export type TRadius = keyof typeof radius
 export default radius
