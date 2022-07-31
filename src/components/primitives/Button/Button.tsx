@@ -18,7 +18,7 @@ interface TButtonProps extends PressableProps {
   text?: string
   size?: TSize
   accessible?: boolean
-  accessibilityLabel?: string
+  accessibilityLabel: string
   disabled?: boolean
   color?: TButtonVariants
   children?: JSX.Element | Array<JSX.Element>
@@ -45,7 +45,7 @@ const Button = ({
   return (
     <B
       ref={refs}
-      accessible={accessible}
+      accessible
       accessibilityLabel={accessibilityLabel ?? text}
       disabled={disabled}
       $variants={variants}
