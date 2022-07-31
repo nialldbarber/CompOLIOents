@@ -14,7 +14,7 @@ import sizeVariants, { type TSize } from '~@theme/variants/sizes'
  *   hitSlop as a prop
  */
 
-interface ButtonProps extends PressableProps {
+interface TButtonProps extends PressableProps {
   text?: string
   size?: TSize
   accessible?: boolean
@@ -37,7 +37,7 @@ const Button = ({
   styles,
   refs,
   ...rest
-}: ButtonProps) => {
+}: TButtonProps) => {
   const B = Factory(Container)
   const variants = buttonVariants[color]
   const sizes = sizeVariants[size]

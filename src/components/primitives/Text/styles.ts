@@ -4,7 +4,7 @@ import type { TSize } from '~@theme/variants/sizes'
 
 type Modes = 'dark' | 'light'
 
-type TextProps = {
+type TTextProps = {
   $variant?: Modes
   $fontSize?: TSize
   $isTruncated?: boolean
@@ -14,7 +14,7 @@ type TextProps = {
   $strikeThrough?: boolean
 }
 
-export const Text = styled(RnText)<TextProps>`
+export const Text = styled(RnText)<TTextProps>`
   color: ${({ $variant }) => $variant && $variant};
   font-size: ${({ $fontSize }) => $fontSize && $fontSize};
   font-style: ${({ $italic }) => ($italic ? 'italic' : 'normal')};

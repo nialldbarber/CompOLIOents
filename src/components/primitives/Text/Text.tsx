@@ -6,12 +6,12 @@ import buttonVariants from '~@theme/variants/button'
 import sizeVariants, { type TSize } from '~@theme/variants/sizes'
 import type { States } from '~@types/index'
 
-type TextVariants = States
+type TTextVariants = States
 
-type TextProps = {
+type TTextProps = {
   text?: string
   size?: TSize
-  variants?: TextVariants
+  variants?: TTextVariants
   isTruncated?: boolean
   bold?: boolean
   fontWeight?: TFontWeights
@@ -31,7 +31,7 @@ const Text = ({
   underline,
   strikeThrough,
   children,
-}: TextProps) => {
+}: TTextProps) => {
   const T = Factory(RnText)
   const { fontSize } = sizeVariants[size]
   const { color } = buttonVariants[variants]

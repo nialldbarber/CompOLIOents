@@ -5,7 +5,7 @@ import radius from '~@theme/base/radius'
 import { TButtonVariants } from '~@theme/variants/button'
 import type { TSize } from '~@theme/variants/sizes'
 
-type ContainerProps = {
+type TContainerProps = {
   $variants?: TButtonVariants
   $disabled?: boolean
   $styles?: CSSProp
@@ -16,7 +16,7 @@ const disabledStyles = css`
   background-color: grey;
 `
 
-export const Container = styled.Pressable<ContainerProps>`
+export const Container = styled.Pressable<TContainerProps>`
   border-radius: ${radius.sm};
   ${centerContent};
   ${({ $disabled }) => $disabled && disabledStyles};
