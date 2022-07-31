@@ -2,7 +2,7 @@
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
       "~@components/*": ["./src/components/*"],

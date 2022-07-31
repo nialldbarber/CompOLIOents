@@ -3,6 +3,6 @@ const states = {
   secondary: 'secondary',
   tertiary: 'tertiary',
   error: 'error',
-}
+} as const
 
 export type States = keyof typeof states
