@@ -2,10 +2,10 @@ import { Text as RnText } from 'react-native'
 import styled from 'styled-components/native'
 import type { TSize } from '~@theme/variants/sizes'
 
-type Modes = 'dark' | 'light'
+type TModes = 'dark' | 'light'
 
 type TTextProps = {
-  $variant?: Modes
+  $variant?: TModes
   $fontSize?: TSize
   $isTruncated?: boolean
   $bold?: boolean
