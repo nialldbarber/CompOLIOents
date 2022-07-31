@@ -2,7 +2,7 @@ import * as React from 'react'
 import { FlatList as RnFlatList } from 'react-native'
 import { FlashList } from '@shopify/flash-list'
 
-type Base = {
+type TBase = {
   data: Record<string, any>[]
   renderItem: (
     ...args: any[]
@@ -13,11 +13,11 @@ type Base = {
   refs?: any
 }
 
-type FlatListProps =
+type TFlatListProps =
   | { flashlist?: true; estimatedItemSize: number }
   | { flashlist?: false; estimatedItemSize?: never }
 
-type Props = Base & FlatListProps
+type TProps = TBase & TFlatListProps
 
 /**
  * ## FlatList
@@ -32,7 +32,7 @@ const FlatList = ({
   estimatedItemSize,
   refs,
   ...rest
-}: Props) => {
+}: TProps) => {
   const internals = {
     data,
     renderItem,
