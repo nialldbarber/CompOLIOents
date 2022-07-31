@@ -5,5 +5,5 @@ const hitSlop = {
   right: 0,
 } as const
 
-export type HitSlopT = keyof typeof hitSlop
+export type THitSlop = keyof typeof hitSlop
 export default hitSlop
