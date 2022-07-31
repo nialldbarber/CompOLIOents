@@ -2,11 +2,11 @@ import { CSSProp, css } from 'styled-components'
 import styled from 'styled-components/native'
 import { centerContent } from '~@theme/base/mixins'
 import radius from '~@theme/base/radius'
-import { ButtonVariants } from '~@theme/variants/button'
+import { TButtonVariants } from '~@theme/variants/button'
 import type { Size } from '~@theme/variants/sizes'
 
 type ContainerProps = {
-  $variants?: ButtonVariants
+  $variants?: TButtonVariants
   $disabled?: boolean
   $styles?: CSSProp
   $sizes?: Size

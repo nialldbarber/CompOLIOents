@@ -4,7 +4,7 @@ import type { CSSProp } from 'styled-components'
 import { Container } from '~@components/primitives/Button/styles'
 import { Text } from '~@components/primitives/Text'
 import { Factory } from '~@core/factory'
-import buttonVariants, { type ButtonVariants } from '~@theme/variants/button'
+import buttonVariants, { type TButtonVariants } from '~@theme/variants/button'
 import sizeVariants, { type Size } from '~@theme/variants/sizes'
 
 /**
@@ -20,7 +20,7 @@ interface ButtonProps extends PressableProps {
   accessible?: boolean
   accessibilityLabel?: string
   disabled?: boolean
-  color?: ButtonVariants
+  color?: TButtonVariants
   children?: JSX.Element | Array<JSX.Element>
   styles?: CSSProp
   refs?: any

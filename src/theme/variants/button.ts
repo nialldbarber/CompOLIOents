@@ -1,9 +1,9 @@
 import { States } from '~@types/index'
 
-export type ButtonVariants = States
+export type TButtonVariants = States
 
 const buttonVariants: Record<
-  ButtonVariants,
+  TButtonVariants,
   {
     color: string
     backgroundColor: string
