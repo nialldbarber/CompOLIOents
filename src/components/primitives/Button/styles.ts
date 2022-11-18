@@ -16,7 +16,7 @@ const disabledStyles = css`
   background-color: grey;
 `
 
-export const Container = styled.Pressable<TContainerProps>`
+export const Container = styled.TouchableOpacity<TContainerProps>`
   border-radius: ${radius.sm};
   ${centerContent};
   ${({ $disabled }) => $disabled && disabledStyles};

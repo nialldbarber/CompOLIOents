@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Text as RnText } from '~@components/primitives/Text/styles'
 import { Factory } from '~@core/factory'
 import type { TFontWeights } from '~@theme/base/typography'

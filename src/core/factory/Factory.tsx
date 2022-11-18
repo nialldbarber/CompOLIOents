@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { ComponentType, forwardRef } from 'react'
 
 export type PlatformProps<T> = {
   _web?: Partial<T>
@@ -14,15 +14,11 @@ type FactoryComponentProps = any &
     children?: string | JSX.Element | JSX.Element[]
   }
 
-const Factory = <T,>(Component: React.ComponentType<T>) =>
-  React.forwardRef(
-    ({ children, ...props }: T & FactoryComponentProps, ref: any) => {
-      return (
-        <Component {...props} ref={ref}>
-          {children}
-        </Component>
-      )
-    }
-  )
+const Factory = <T,>(Component: ComponentType<T>) =>
+  forwardRef(({ children, ...props }: T & FactoryComponentProps, ref: any) => (
+    <Component {...props} ref={ref}>
+      {children}
+    </Component>
+  ))
 
 export default Factory

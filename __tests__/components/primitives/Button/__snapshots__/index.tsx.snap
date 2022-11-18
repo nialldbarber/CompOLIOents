@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match the snapshot 1`] = `
+<View
+  accessibilityLabel="hello"
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "dodgerblue",
+        "borderColor": "dodgerblue",
+        "borderRadius": 4,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#111",
+        "display": "flex",
+        "fontSize": 16,
+        "justifyContent": "center",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#111",
+          "fontSize": 16,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+          "textDecorationColor": "black",
+          "textDecorationLine": "none",
+          "textDecorationStyle": "solid",
+        },
+      ]
+    }
+  >
+    button test
+  </Text>
+</View>
+`;
+
+exports[`<Button /> should render children instead of text if provided 1`] = `
+<View
+  accessibilityLabel="hello"
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "dodgerblue",
+        "borderColor": "dodgerblue",
+        "borderRadius": 4,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "color": "#111",
+        "display": "flex",
+        "fontSize": 16,
+        "justifyContent": "center",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+    ]
+  }
+>
+  <Text>
+    Push it to the limit
+  </Text>
+</View>
+`;

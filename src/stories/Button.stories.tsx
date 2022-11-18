@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Button } from '~@components/primitives/Button'
 
 export default {
@@ -7,14 +7,20 @@ export default {
 }
 
 // Colors
-export const Primary = (args: any) => <Button text="Primary" color="primary" />
-export const Secondary = (args: any) => (
-  <Button text="Secondary" color="secondary" />
+export const Primary = () => (
+  <Button text="Primary" color="primary" accessibilityLabel="hello" />
 )
-export const Tertiary = (args: any) => (
-  <Button text="Tertiary" color="tertiary" />
+export const Secondary = () => (
+  <Button accessibilityLabel="hello" text="Secondary" color="secondary" />
 )
-export const Error = (args: any) => <Button text="Error" color="error" />
+export const Tertiary = () => (
+  <Button accessibilityLabel="hello" text="Tertiary" color="tertiary" />
+)
+export const Error = () => (
+  <Button accessibilityLabel="hello" text="Error" color="error" />
+)
 
 // Disabled
-export const Disabled = (args: any) => <Button text="Disabled" disabled />
+export const Disabled = () => (
+  <Button accessibilityLabel="hello" text="Disabled" disabled />
+)
